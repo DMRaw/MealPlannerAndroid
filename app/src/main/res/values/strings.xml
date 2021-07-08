@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Meal Planner</string>
+    <string name="image_of_recipe_describtion">image of recipe</string>
+    <string name="name_of_recipe">Name of recipe</string>
+    <string name="source">URL</string>
+    <string name="recipe_image_content_description">Image of the Dish</string>
+    <string name="ingredient_amount">Ingredient Amount</string>
+    <string name="ingredient_name">Ingredient Name</string>
+    <string name="recipe_book">Recipe Book</string>
+    <string name="home">Home</string>
+    <string name="planner">Planner</string>
+    <string name="ingredient_unit">Unit of the ingredient</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="recipe_steps">Recipe Steps</string>
+    <string name="add_ingredient">+</string>
+    <string name="add_recipe_step">+</string>
+    <string name="save_button">Save</string>
+    <string name="recipe_step">Recipe Step</string>
+    <string name="source_picture">Picture URL</string>
+    <string name="source_video">Video URL</string>
+    <string name="amount_with_unit">%s %s</string>
+    <string name="step_number">Number of step</string>
+    <string name="cancle">Cancle</string>
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="add_recipe">Add Recipe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipe_name_not_filled">Name must be filled</string>
+</resources>

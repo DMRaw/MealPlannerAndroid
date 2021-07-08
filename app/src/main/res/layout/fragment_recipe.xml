@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dmraw.mealplanner.RecipeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecipeModifyFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lable_edit_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="114dp" />
+
+        <TextView
+            android:id="@+id/recipe_name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/recipe_name_edit_text"
+            android:text="@string/name_of_recipe"
+            app:layout_constraintEnd_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/recipe_name_edit_text" />
+
+        <TextView
+            android:id="@+id/recipe_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{viewModel.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/source_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/source_edit_text"
+            android:text="@string/source"
+            app:layout_constraintEnd_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/source_edit_text" />
+
+        <TextView
+            android:id="@+id/source_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{viewModel.uri}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toBottomOf="@id/recipe_name_edit_text" />
+
+        <TextView
+            android:id="@+id/source_picture_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/source_picture_edit_text"
+            android:text="@string/source_picture"
+            app:layout_constraintEnd_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/source_picture_edit_text" />
+
+        <TextView
+            android:id="@+id/source_picture_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{viewModel.imageUri}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toBottomOf="@id/source_edit_text" />
+
+        <TextView
+            android:id="@+id/source_video_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/source_video_edit_text"
+            android:text="@string/source_video"
+            app:layout_constraintEnd_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/source_video_edit_text" />
+
+        <TextView
+            android:id="@+id/source_video_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{viewModel.videoUri}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toBottomOf="@id/source_picture_edit_text" />
+
+        <TextView
+            android:id="@+id/ingredients_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/ingredients"
+            android:text="@string/ingredients"
+            app:layout_constraintEnd_toEndOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ingredients" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.ingrediants}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toBottomOf="@id/source_video_edit_text" />
+
+        <TextView
+            android:id="@+id/recipe_steps_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/recipe_steps"
+            android:text="@string/recipe_steps"
+            app:layout_constraintEnd_toEndOf="@id/lable_edit_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/recipe_steps" />
+
+        <TextView
+            android:id="@+id/recipe_steps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.steps}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lable_edit_guideline"
+            app:layout_constraintTop_toBottomOf="@id/ingredients" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

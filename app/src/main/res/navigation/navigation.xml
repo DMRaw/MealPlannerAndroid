@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/recipeBookFragment">
+    <fragment
+        android:id="@+id/recipeModifyFragment"
+        android:name="com.dmraw.mealplanner.RecipeModifyFragment"
+        android:label="recipe_modify_fragment"
+        tools:layout="@layout/fragment_recipe_modify" >
+        <action
+            android:id="@+id/action_recipeModifyFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.dmraw.mealplanner.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipeFragment_to_recipeModifyFragment"
+            app:destination="@id/recipeModifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeBookFragment"
+        android:name="com.dmraw.mealplanner.RecipeBookFragment"
+        android:label="fragment_recipe_book"
+        tools:layout="@layout/fragment_recipe_book" >
+        <action
+            android:id="@+id/action_recipeBookFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_recipeBookFragment_to_recipeModifyFragment"
+            app:destination="@id/recipeModifyFragment" />
+    </fragment>
+</navigation>
